@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/sign-in-style.css" type="text/css" rel="stylesheet">
+	
+	    <!-- favicons  -->
+    <link rel="shortcut icon" href="favicon-16x16.ico" type="image/x-icon">
+    <link rel="icon" href="favicon-16x16.ico" type="image/x-icon">
+	 <title>Việt Phương</title>
+
+</head>
+<body>
+	
+	<div>
+		<a href="index.html"><img src="images/logo1.png" alt=""></a>
+	</div>
+
+<div class="container right-panel-active">
+	<!-- Sign Up -->
+	<div class="container__form container--signup">
+		<form action="#" class="form" id="form1">
+			<h2 class="form__title">Đăng ký</h2>
+			<input type="text" placeholder="User" class="input" />
+			<input type="email" placeholder="Email" class="input" />
+			<input type="password" placeholder="Password" class="input" />
+			<button class="btn">Đăng ký</button>
+		</form>
+	</div>
+
+	<!-- Sign In -->
+	<div class="container__form container--signin">
+		<form action="#" class="form" id="form2">
+			<h2 class="form__title">Đăng nhập</h2>
+			<input type="email" placeholder="Email" class="input" />
+			<input type="password" placeholder="Password" class="input" />
+			<a href="#" class="link">Quên mật khẩu?</a>
+			<button class="btn">Đăng nhập</button>
+		</form>
+	</div>
+
+	<!-- Overlay -->
+	<div class="container__overlay">
+		<div class="overlay">
+			<div class="overlay__panel overlay--left">
+				<button class="btn" id="signIn">Đăng nhập</button>
+			</div>
+			<div class="overlay__panel overlay--right">
+				<button class="btn" id="signUp">Đăng ký</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+const signInBtn = document.getElementById("signIn");
+const signUpBtn = document.getElementById("signUp");
+const fistForm = document.getElementById("form1");
+const secondForm = document.getElementById("form2");
+const container = document.querySelector(".container");
+
+signInBtn.addEventListener("click", () => {
+	container.classList.remove("right-panel-active");
+});
+
+signUpBtn.addEventListener("click", () => {
+	container.classList.add("right-panel-active");
+});
+
+fistForm.addEventListener("submit", (e) => e.preventDefault());
+secondForm.addEventListener("submit", (e) => e.preventDefault());
+
+</script>
+
+</body>
+</html>
